@@ -21,15 +21,21 @@ Buffer analysis is one of the several important spatial analysis functions of ge
 判定点的凹凸性后，凹点使用角平分线法确定左缓冲区点，凸点使用半径旋转法确定左缓冲区点。
 
 ## angular bisectrix algorithm
->> 图
->> alpha角为一个向量的方位角.
->> delta角为两个向量的夹角（0 <= delta <= 180），分局向量内积的计算法则定义，实则直线夹角的补交
->> 从图中的图形关系得
->> $$ beta=alpha+（180-delta）/2 ，beta为角平分线的方向角
->> 在计算机中，角度顺时针方向旋转即为“+”，逆时针方向为“-”
->> $$ x1=x0+R/sin(180-delta)/2 * cos(deta)
->> $$ y1=y0+R/sin(180-delta)/2 * sin(deta)
->> 据此，得到凹点的唯一缓冲点
+> 图
+
+> **alpha角为一个向量的方位角**
+
+> **delta角为两个向量的夹角（0 <= delta <= 180），分局向量内积的计算法则定义，实则直线夹角的补角**
+
+> 从图中的图形关系得
+
+> ***beta=alpha+（180-delta）/2***，**beta为角平分线的方向角** (角度顺时针方向旋转即为“+”，逆时针方向为“-”)
+
+>***x1=x0+R/sin(180-delta)/2 * cos(deta)***
+
+>***y1=y0+R/sin(180-delta)/2 * sin(deta)***
+
+据此，得到凹点的唯一缓冲点
 
 ## buffer radius-rotation vector creation algorithm
 
